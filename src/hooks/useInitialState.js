@@ -8,11 +8,11 @@ const useInitialState = () => {
   const [state, setState] = useState(initialState);
   const addToCart = (payload) => {
     setState({
-      ...state /*Mantén el estado,  que por ahora solo tiene cart, pero mas adelante tendrá otros elementos */,
+      ...state /*Mantén el estado, por ahora solo tiene cart,  mas adelante tendrá otros elementos */,
       cart: [
         ...state.cart,
         payload,
-      ] /*Manten lo qu ya existe: state.cart, no lo quiero borrar, y agrega lo que te voy a pasar (payload). Payload es una palabra acostumbrada. En este caso se trata de un producto */,
+      ] /*Manten lo que ya existe: state.cart, no lo quiero borrar, y agrega lo que te voy a pasar (payload). Payload es una palabra acostumbrada. En este caso se trata de un producto */,
     });
   };
 

@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { useContext } from "react";
 import AppContext from "../context/AppContext";
 import OrderItem from "@components/OrderItem";
 import "@styles/MyOrder.scss";
 import arrow from "@icons/flechita.svg";
 import ProductList from "./ProductList";
+import Checkout from "../pages/Checkout";
 
 const MyOrder = () => {
   const { state } = useContext(AppContext);
@@ -25,7 +27,7 @@ const MyOrder = () => {
       </div>
       <div className="my-order-content">
         {state.cart.map((product) => (
-          <OrderItem product={product} key={`orderItem-${product.id}`} />
+          <OrderItem product={product} key={`orderItemA-${product.id}`} />
         ))}
 
         <div className="order">
@@ -37,8 +39,12 @@ const MyOrder = () => {
 
           <p>${sumTotal()}</p>
         </div>
-        <button className="primary-button">Checkout</button>
+        <button className="primary-button">
+          <Link to="/checkout"> CheckOut</Link>
+        </button>
       </div>
+
+      {/* {toggleMyOrder && <MyOrder />} */}
     </aside>
   );
 };
