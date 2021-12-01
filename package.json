@@ -1,5 +1,6 @@
 {
   "name": "react-shop",
+  "homepage": "https://uralberto.github.io/react-shop",
   "version": "1.0.0",
   "description": "react eshop",
   "main": "src/index.js",
