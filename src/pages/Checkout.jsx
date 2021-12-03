@@ -32,7 +32,7 @@ const Checkout = () => {
               {fecha}
               <span>{numArticles()} articles</span>
             </p>
-            <p>Vr total ${sumTotal()}</p>
+            <p>Vr total COP {sumTotal()}</p>
           </div>
         </div>
         {state.cart.map((product) => (
